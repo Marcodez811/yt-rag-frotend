@@ -1,4 +1,4 @@
-import { Bot, Link, Upload, X, Youtube } from "lucide-react";
+import { Bot, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,

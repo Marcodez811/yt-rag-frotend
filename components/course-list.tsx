@@ -1,6 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 import Link from "next/link";
+import { CreateCourseDialog } from "./create-course-dialog";
 
 interface Course {
   id: number;
@@ -13,12 +17,13 @@ interface CourseListProps {
 }
 
 export function CourseList({ courses }: CourseListProps) {
+  const [createDialogOpen, setCreateDialogOpen] = useState(false);
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-2xl font-semibold">My Courses</h2>
-        <Button asChild>
-          <Link href="/course/new">Create new course</Link>
+        <Button asChild onClick={() => setCreateDialogOpen(!createDialogOpen)}>
+          <p className="cursor-pointer">Create new course</p>
         </Button>
       </div>
 
@@ -40,6 +45,10 @@ export function CourseList({ courses }: CourseListProps) {
           <></>
         )}
       </div>
+      <CreateCourseDialog
+        open={createDialogOpen}
+        onOpenChange={setCreateDialogOpen}
+      />
     </div>
   );
 }

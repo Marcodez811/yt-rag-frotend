@@ -23,9 +23,9 @@ export default function Page() {
     <div className="h-[calc(100vh-3.5rem)] bg-background p-8 overflow-hidden">
       <div className="mx-auto max-w-6xl h-full overflow-auto">
         <div className="mb-12">
-          <h1 className="mt-24 text-5xl font-bold">Enjoy using Obot AI</h1>
+          <h1 className="mt-24 text-5xl font-bold">Obot AI</h1>
           <p className="mt-4 text-xl text-muted-foreground">
-            Online learners' favorite AI Learning Companion
+            An AI powered learning tool optimized for online learners
           </p>
         </div>
         <hr className="mb-12" />
